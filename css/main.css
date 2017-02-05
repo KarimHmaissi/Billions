@@ -1,0 +1,157 @@
+/* ==========================================================================
+   General
+   ========================================================================== */
+html {
+	font-family: 'Open Sans', sans-serif !important;
+}
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+
+.clusterize-scroll {
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+#contentArea {
+	max-width: 640px;
+	/*margin: 0px auto;*/
+	margin-left: 50%;
+}
+
+.main-details {
+	max-width: 50%;
+	float: left;
+	padding: 0 100px;
+	position: fixed;
+}
+
+
+
+.amount-left-block {
+	height: 100px;
+	width: 50px;
+}
+
+.amount-left-block .left {
+	background-color: grey;
+	height: 100%;
+}
+
+
+
+
+
+.products {
+	position: fixed;
+	top: 300px;
+	left: 0;
+	max-height: 400px;
+	overflow: scroll;
+	max-width: 40%;
+	padding: 0 4%;
+}
+
+.products li {
+	
+
+}
+
+.products img {
+	max-height: 100px
+	max-width: 100px;
+	width: 100px;
+	height: 100px;
+}
+
+
+
+
+/* ==========================================================================
+   Stack of money
+   ========================================================================== */
+
+
+.billions,
+.billions .billions__inner {
+	list-style: none;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+/*.billions__inner li {
+	position: relative;
+	margin: 10em auto 0;
+	width: 20em; height: 20em;
+	background: dimgrey;
+}
+.billions__inner li:before, .billions__inner li:after {
+	position: absolute;
+	transform-origin: bottom right;
+	content: '';
+}
+.billions__inner li:before {
+	top: 0; right: 100%; bottom: 0;
+	width: 4em;
+	background: darkgrey;
+	transform: skewY(45deg);
+}
+.billions__inner li:after {
+	right: 0; bottom: 100%; left: 0;
+	height: 4em;
+	background: silver;
+	transform: skewX(45deg);
+}*/
+
+.billions li {
+	position: relative;
+
+}
+
+
+.billions .billions__inner {
+	display: inline-block;
+	width: 100%;
+}
+
+.billions .billions__inner li {
+	display: inline-block;
+	height: 40px;
+	width: calc(10% - 4px);
+	background-color: #333;
+	color: #fff;
+	/*margin-right: 4px;*/
+	border: 1px solid grey;
+	vertical-align: text-bottom;
+}
+
+.billions .billions__inner .label {
+	position: absolute;
+    top: 2px;
+    left: 0;
+    right: 0;
+    max-width: 50%;
+    margin: 0 auto;
+    z-index: 99;
+    font-size: 21px;
+    color: hsla(0, 0%, 59%, 1);
+    z-index: 99;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
