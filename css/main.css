@@ -23,9 +23,11 @@ html {
 
 .main-details {
 	max-width: 50%;
-	float: left;
-	padding: 0 100px;
+	background: white;
+	padding: 40px;
 	position: fixed;
+	right: 50px;
+	z-index: 999;
 }
 
 
@@ -46,12 +48,14 @@ html {
 
 .products {
 	position: fixed;
-	top: 300px;
+	top: 60px;
 	left: 0;
-	max-height: 400px;
+	max-height: calc(100vh - 80px);
 	overflow: scroll;
-	max-width: 40%;
+	max-width: 50%;
 	padding: 0 4%;
+	padding-bottom: 40px;
+	width: 100%;
 }
 
 .products li {
@@ -130,8 +134,7 @@ html {
 .billions .billions__inner .label {
 	position: absolute;
     top: 2px;
-    left: 0;
-    right: 0;
+	left: 25px;
     max-width: 50%;
     margin: 0 auto;
     z-index: 99;
