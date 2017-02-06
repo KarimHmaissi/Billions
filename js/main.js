@@ -211,7 +211,7 @@
 
 			updateDataArray(amount);
 
-			
+
 			amountLeft -= parseInt(amount, 10);
 
 			// $('#amount-left').text(amountLeft);
@@ -242,20 +242,31 @@
 
 
 
-			console.log('AmountSpent: ', amount);
-			console.log('AmountLeft: ', amountLeft);
-
 			//animate the boxes going white
+			var whiteBlocks = amount / 10000;
+			var offset = (BILLION - amountLeft) / 10000;
 
-			//then update the data array
-			
-			var newData = getData();
+			var tick = function (whiteBlocks) {
+				if(!(whiteBlocks === 0)) {
 
-			//then republish data to clusrerize
-			clusterize.update(newData);
+					var index = whiteBlocks + offset;
+					var $li = $($('.billions__inner li').get(index));
+					$li.addClass('spent').addClass('animate');
 
+					whiteBlocks--;
 
-			
+					tick(whiteBlocks);
+				} else {
+					//then update the data array
+					
+					var newData = getData();
+
+					//then republish data to clusrerize
+					clusterize.update(newData);
+				}
+			};
+
+			tick(whiteBlocks);
 
 			console.log('Iv updated the data fam');
 		});
