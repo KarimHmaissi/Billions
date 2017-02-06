@@ -5,6 +5,15 @@ html {
 	font-family: 'Open Sans', sans-serif !important;
 }
 
+html, body {
+	background: #262931;
+	color: white;
+}
+
+p {
+	color: #929cb3;
+}
+
 /* ==========================================================================
    Layout
    ========================================================================== */
@@ -23,7 +32,7 @@ html {
 
 .main-details {
 	max-width: 50%;
-	background: white;
+	background: rgba(38, 41, 49, 0.62);
 	padding: 40px;
 	position: fixed;
 	right: 50px;
@@ -35,27 +44,53 @@ html {
 .amount-left-block {
 	height: 100px;
 	width: 50px;
+	border: 1px solid #3e8f3e;
 }
 
 .amount-left-block .left {
-	background-color: grey;
+	/*background-color: grey;*/
 	height: 100%;
+
+	/*border-color: #3e8f3e;*/
+	background-image: linear-gradient(to bottom,#5cb85c 0,#419641 100%);
 }
 
+
+
+
+
+
+
+
+/*//nav*/
+
+.navbar-static-top, .navbar-fixed-top, .navbar-fixed-bottom {
+	background-color: hsla(223, 12%, 11%, 1);
+	border: 0;
+	background-image: none;
+}
+
+.container>.navbar-header,
+.navbar-inverse .navbar-brand {
+	color: #fff;
+	font-weight: 100;
+	font-size: 120%;
+}
 
 
 
 
 .products {
 	position: fixed;
-	top: 60px;
-	left: 0;
-	max-height: calc(100vh - 80px);
-	overflow: scroll;
-	max-width: 50%;
-	padding: 0 4%;
-	padding-bottom: 40px;
-	width: 100%;
+    top: 0;
+    left: 0;
+    max-height: calc(100vh - 80px);
+    overflow: auto;
+    max-width: 47%;
+    padding: 0 4%;
+    margin-top: 80px;
+    padding-bottom: 40px;
+    width: 100%;
 }
 
 .products li {
@@ -68,6 +103,25 @@ html {
 	max-width: 100px;
 	width: 100px;
 	height: 100px;
+}
+
+
+
+
+/* ==========================================================================
+   Accordion
+   ========================================================================== */
+.products .panel-body {
+	color: #fff;
+}
+
+.products .panel-collapse {
+	background-color: #404553;
+	color: #fff;
+}
+
+.panel-group .panel {
+	border: 0;
 }
 
 
@@ -124,10 +178,9 @@ html {
 	display: inline-block;
 	height: 40px;
 	width: calc(10% - 4px);
-	background-color: #333;
+	background-color: #49a049;
 	color: #fff;
-	/*margin-right: 4px;*/
-	border: 1px solid grey;
+	border: 1px solid green;
 	vertical-align: text-bottom;
 }
 
@@ -139,9 +192,17 @@ html {
     margin: 0 auto;
     z-index: 99;
     font-size: 21px;
-    color: hsla(0, 0%, 59%, 1);
+    color: #fff;
     z-index: 99;
     text-align: center;
+
+    transition: background-color: 0.2s ease-in-out,
+    			border-color: 0.2s ease-in-out;
+}
+
+.billions .billions__inner .spent {
+	background-color: #fff; 
+	border-color: #fff;
 }
 
 
