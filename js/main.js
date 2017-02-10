@@ -40,22 +40,6 @@
 		{
 		category: 'privateIslands',
 		products: [
-			// {
-			// 	title: 'East sister rock island',
-			// 	description: 'Private Island (1.5 Acres) fully developed and self-efficient, located 1/4 mile off the Atlantic shore of Marathon, Florida Keys. On the island sits a Bahamian style home (+5,000 sf) with a wide veranda and ocean views surrounding it, 3 bed/2bath, open living areas, high ceilings, sliding glass-doors and wood floors throughout.',
-			// 	imageUrl: 'http://placehold.it/500x250',
-			// 	priceFormatted: '$1,000,000',
-			// 	price: '1000000',
-			// 	url: ''
-			// },
-			// {
-			// 	title: 'NAVYS ACRE ISLAND',
-			// 	description: 'Unquestionably a turnkey property it features a gracious main cottage, a separate master cottage, three bedroom guest cottage and a four bunk waterside sleeping cabin. Designed by noted architect Peter Burton of C.A. Ventin Architect Ltd. and built to exacting standards by Paul Hannon Construction, the buildings, decks and boardwalks have been immaculately maintained and cared for.',
-			// 	imageUrl: 'http://placehold.it/500x250',
-			// 	priceFormatted: '$2,250,000',
-			// 	price: '2250000',
-			// 	url: 'http://www.privateislandsonline.com/islands/navys-acre-island'
-			// },
 			{"title":"Navy's Acre Island","description":"Unquestionably a turnkey property it features a gracious main cottage, a separate master cottage, three bedroom guest cottage and a four bunk waterside sleeping cabin. Designed by noted architect Peter Burton of C.A. Ventin Architect Ltd. and built to exacting standards by Paul Hannon Construction, the buildings, decks and boardwalks have been immaculately maintained and cared for.","imageUrl":"/img/NavysAcreIsland.jpg","priceFormatted":"$2,250,000","price":"2250000","url":"http://www.privateislandsonline.com/islands/navys-acre-island"},
 			{"title":"Isla Palenquita","description":"Palenquita is self-standing Island and not a part of a bigger Island property, which is very valuable and special. It has total of 4.3 hectares of land and a small peninsula which is not included in this measurement but could be utilized as a helicopter pad or additional area. ","imageUrl":"/img/IslaPalenquita.jpg","priceFormatted":"$3,000,000","price":"3000000","url":"http://www.privateislandsonline.com/islands/isla-palenquita"},
 			{"title":"North Saddle Caye","description":"North Saddle Caye, situated approximately 45 minutes ENE of the very popular, Placencia Peninsula, is a 4 acre private island paradise that has been fully developed, with all the comforts and amenities of a luxury estate.","imageUrl":"/img/NorthSaddleCaye.jpg","priceFormatted":"$6,000,000","price":"6000000","url":"http://www.privateislandsonline.com/islands/north-saddle-caye"},
@@ -199,9 +183,10 @@
 				var description = '<p>' + product.description + '</p>';
 				var price = '<p class="product__price">' + product.priceFormatted + '</p>';
 				var button = '<button class="btn btn-success buy">Buy</button>';
+				var link = '<a href="' + product.url + '" target="_blank" class="link-website">View website</a>';
 				var contentBlock = '<div class="content-block"></div>';
 
-				var $contentBlock = $(contentBlock).append(title).append(description).append(price).append(button)
+				var $contentBlock = $(contentBlock).append(title).append(description).append(link).append(price).append(button)
 				li.append(image).append($contentBlock);
 
 				$ul.append(li);
@@ -271,10 +256,11 @@
 			  duration: 1000,
 			  easing:'linear',
 			  step: function() {
-			    $('#amount-left').text(Math.floor(this.countNum));
+			  	var amountYo = Math.floor(this.countNum);
+			    $('#amount-left').text(numberWithCommas(amountYo));
 			  },
 			  complete: function() {
-			    $('#amount-left').text(this.countNum);
+			    $('#amount-left').text(numberWithCommas(this.countNum));
 			  }
 			});
 
