@@ -14,6 +14,10 @@ p {
 	color: #929cb3;
 }
 
+a {
+	color: white;
+}
+
 #navbar {
 	text-align: center;
 }
@@ -164,6 +168,18 @@ p {
 
 
 
+
+/*tabs*/
+.nav-tabs {
+	display: block;
+	position: fixed;
+	left: 40px;
+	z-index: 99999;
+	top: 20px;
+}
+    
+
+
 /* ==========================================================================
    Accordion
    ========================================================================== */
@@ -261,15 +277,17 @@ p {
 
 .billions .billions__inner .label {
 	position: absolute;
-    top: 2px;
+	top: 2px;
 	left: 25px;
-    max-width: 50%;
-    margin: 0 auto;
-    z-index: 99;
-    font-size: 21px;
-    color: #fff;
-    z-index: 99;
-    text-align: center;
+	max-width: 50%;
+	margin: 0 auto;
+	z-index: 99;
+	font-size: 16px;
+	font-weight: 300;
+	color: #fff;
+	z-index: 99;
+	text-align: center;
+	margin-top: 6px;
 }
 
 .billions .billions__inner .spent {
