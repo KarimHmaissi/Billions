@@ -14,6 +14,10 @@ p {
 	color: #929cb3;
 }
 
+#navbar {
+	text-align: center;
+}
+
 /* ==========================================================================
    Layout
    ========================================================================== */
@@ -22,6 +26,9 @@ p {
 .clusterize-scroll {
 	max-width: 100%;
 	margin: 0 auto;
+	margin-top: 10px;
+	max-height: 100vh;
+
 }
 
 #contentArea {
@@ -33,18 +40,24 @@ p {
 .main-details {
 	max-width: 50%;
 	background: rgba(38, 41, 49, 0.78);
-	padding: 20px 40px;
+	padding: 20px;
 	position: fixed;
 	right: 40px;
 	z-index: 999;
 	bottom: 0;
+	text-align: center;
 }
 
+
+#amount-left {
+	font-weight: 100;
+}
 
 
 .amount-left-block {
 	height: 200px;
 	width: 100px;
+	margin: 0 auto;
 	border: 4px solid #3e8f3e;
 	vertical-align: top;
 	position: relative;
@@ -108,8 +121,9 @@ p {
 
 .products li {
 	padding: 60px 80px;
-    border-bottom: 1px solid #262931;
-
+    border-bottom: 1px solid #181a1f;
+    border-left: 1px solid #181a1f;
+    border-right: 1px solid #181a1f;
 }
 
 .products img {
@@ -131,7 +145,13 @@ p {
 .panel-default>.panel-heading+.panel-collapse>.panel-body {
 	border-top-color: #ddd;
 	max-height: 540px;
-	overflow: scroll;
+	overflow-y: scroll;
+}
+
+
+.content-block .btn {
+	min-width: 100%;
+	min-height: 40px;
 }
 
 
@@ -151,12 +171,23 @@ p {
 }
 
 .products .panel-collapse {
-	background-color: #363a46;
+	background-color: #262931;
 	color: #fff;
 }
 
 .panel-group .panel {
 	border: 0;
+}
+
+.panel-default>.panel-heading+.panel-collapse>.panel-body {
+	border: 0;
+}
+
+.panel-default>.panel-heading {
+	background: #181a1f;
+	background-image: none;
+	color: #fff;
+	padding: 18px;
 }
 
 
